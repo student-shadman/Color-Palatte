@@ -1,0 +1,105 @@
+:root {
+  --bg: #f5f5f5;
+  --text: #222;
+  --accent: #ffac33;
+  --card: #fff;
+}
+
+body.dark {
+  --bg: #181818;
+  --text: #eee;
+  --accent: #ffa500;
+  --card: #2b2b2b;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 2rem;
+  transition: all 0.3s;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  display: grid;
+  gap: 2rem;
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--accent);
+}
+
+input[type="color"], input[type="text"] {
+  margin-right: 1rem;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+section.picker, section.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.info p {
+  margin: 0.2rem 0;
+}
+
+.palette-grid, .harmony-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 1rem;
+}
+
+.palette-grid div, .harmony-display div {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.palette-grid div span,
+.harmony-display div span {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0.3rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+#contrastPreview {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.palette-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}

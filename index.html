@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Palette Tool</title>
+  <link rel="stylesheet" href="color.css" />
+</head>
+<body>
+  <main>
+    <h1>🎨 Color Palette Tool</h1>
+
+    <section class="picker">
+      <input type="color" id="colorInput">
+      <input type="text" id="hexInput" placeholder="#RRGGBB" maxlength="7">
+    </section>
+
+    <section class="info">
+      <p>Hex: <span id="hexValue"></span></p>
+      <p>RGB: <span id="rgbValue"></span></p>
+      <p>HSL: <span id="hslValue"></span></p>
+      <p>Name: <span id="nameValue"></span></p>
+    </section>
+
+    <section class="actions">
+      <button id="addToPalette">Add to Palette</button>
+      <button id="themeToggle">Toggle Theme</button>
+    </section>
+
+    <section class="harmony">
+      <h2>🎯 Color Harmonies</h2>
+      <div class="harmony-buttons">
+        <button class="harmony-btn" data-type="complementary">Complementary</button>
+        <button class="harmony-btn" data-type="analogous">Analogous</button>
+        <button class="harmony-btn" data-type="triadic">Triadic</button>
+        <button class="harmony-btn" data-type="tetradic">Tetradic</button>
+      </div>
+      <div id="harmonyDisplay" class="harmony-display"></div>
+    </section>
+
+    <section class="contrast-check">
+      <h2>🌓 Contrast Checker</h2>
+      <input type="color" id="bgColor" value="#ffffff">
+      <input type="color" id="textColor" value="#000000">
+      <div id="contrastPreview">Aa Sample Text</div>
+      <p id="contrastRatio"></p>
+      <p id="contrastResult"></p>
+    </section>
+
+    <section class="palette-controls">
+      <h2>🎨 Your Palette</h2>
+      <div id="paletteGrid" class="palette-grid"></div>
+      <div class="palette-buttons">
+        <button id="downloadPalette">Download</button>
+        <input type="file" id="uploadPalette" accept=".json">
+      </div>
+    </section>
+  </main>
+
+  <script src="color.js"></script>
+</body>
+</html>
